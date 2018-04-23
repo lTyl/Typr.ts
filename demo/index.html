@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Typr.ts Demo</title>
+
+	<style type="text/css">
+		body {
+			font-family:sans-serif;
+			background-color: #ceedf4;
+			margin:0;
+			padding:0;
+			line-height:1.6em;
+			color: rgb(51, 51, 51);
+		}
+		pre{
+			background-color: rgba(0,0,0,0.04);
+			padding:1em;
+			font-size:1.2em;
+			tab-size: 4;
+		}
+		code {
+			background-color: rgba(0, 0, 0, 0.04);
+			font-size:1.2em;
+			padding: 0.1em 0.2em;
+		}
+		h1 {
+			font-size: 3em;
+			margin: 0;
+			padding: 0.7em;
+			color:#ffffff;
+			text-align:center;
+			background-image: linear-gradient(rgb(84, 180, 235), rgb(47, 164, 231));
+		}
+		h2 {
+			font-size: 1.8em;
+			margin-top:1.5em;
+			margin-bottom: 1em;
+			padding-bottom: 0.4em;
+			border-bottom-color: rgb(238, 238, 238);
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+		}
+		h3 { margin-top:1.0em; margin-bottom: 0.5em;}
+		p  { margin: 0 0 1em 0;}
+		.main {
+			margin:0 auto;
+			max-width: 50em;
+
+			padding:0.5em 2em;
+			background-color: #ffffff;
+		}
+	</style>
+</head>
+<body onload="window.Demo.start()">
+
+<h1>Typr.ts demo</h1>
+
+<div class="main">
+	<button type="button" onclick="window.Demo.drawPrev()">Previous 100</button>  <button type="button" onclick="window.Demo.drawNext()">Next 100</button>
+	<b style="float:right">Drag and drop your own font!</b>
+	<div id="glyphcont"></div>
+
+
+	<div style="margin-top:1em">
+		<canvas id="maincanvas" style="float:left"></canvas>
+		<div style="float:left">
+			<div id="properties"></div>
+			<textarea id="textarea" style="width:380px;height:350px"> Path code </textarea>
+		</div>
+	</div>
+
+
+	<input id="word" type="text" value="Photopea" style="font-size:1.5em; width:100%; margin-top:1em;" oninput="window.Demo.drawWord()"></input>
+	<canvas id="wordcanvas"></canvas>
+
+</div>
+</body>
+</html>
