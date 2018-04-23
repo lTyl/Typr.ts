@@ -19,7 +19,7 @@ Typr.ts consists of static functions only, it can be easily rewritten into C or 
 ## Installation
 
 ```
-npm install typr.ts --save
+npm install typr-ts --save
 ```
 
 ## Running Demo
@@ -29,7 +29,7 @@ npm install typr.ts --save
 `npm run webpack-prod` : Output will be in the {root}/dist folder.
 
 ## Usage
-`import { Typr } from "typr.ts";`
+`import { Typr } from "typr-ts";`
 
 #### `Typr.parse(buffer)`
 * `buffer`: ArrayBuffer, binary data of the TTF or OTF font
@@ -42,7 +42,7 @@ var font = Typr.parse(buffer);
 console.log(font);
 ```
 ## TyprU
-`import { TyprU } from "typr.ts";`
+`import { TyprU } from "typr-ts";`
 
 #### `TyprU.codeToGlyph(font, code)`
 
