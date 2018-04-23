@@ -1,17 +1,8 @@
 import { TextDecoder } from "text-encoding";
-interface IBufferData {
-	buff: ArrayBuffer;
-	int8: Int8Array;
-	uint8: Uint8Array;
-	int16: Int16Array;
-	uint16: Uint16Array;
-	int32: Int32Array;
-	uint32: Uint32Array;
-}
 export class Bin {
 	public static _tdec: TextDecoder = new TextDecoder();
 	public static buff: ArrayBuffer = new ArrayBuffer(8);
-	public static t: IBufferData = {
+	public static t = {
 		buff: Bin.buff,
 		int8: new Int8Array(Bin.buff),
 		uint8: new Uint8Array(Bin.buff),

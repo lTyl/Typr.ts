@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"declaration": true,
 		"outDir": "./dist/",
 		"sourceMap": true,
 		"emitDecoratorMetadata": true,
@@ -8,16 +9,13 @@
 		"removeComments": false,
 		"module": "commonjs",
 		"target": "es6",
-		"allowJs": true,
+		"allowJs": false,
 		"baseUrl": "./src",
-		"skipLibCheck": true,
-		"paths": {
-			"utils": ["js/lib/utils.js"]
-		}
+		"skipLibCheck": true
 	},
 	"include": [
 		"node_modules/@types",
-		"./app/**/*.ts",
+		"./src/**/*.ts",
 		"./app/declarations/*.*"
 	]
 }
